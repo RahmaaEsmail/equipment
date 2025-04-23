@@ -1,0 +1,16 @@
+/* In your CSS file or style tag */
+progress {
+  width: 90%;
+  height: 10px;
+  border-radius: 15px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #d6d6d6;
+  border-radius: 15px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #4caf50;
+  border-radius: 15px;
+}

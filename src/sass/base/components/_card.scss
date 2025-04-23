@@ -1,0 +1,9 @@
+.card_icons_container{
+ &:hover {
+    transition: all 0.5s;
+    .card_icons {
+        right : 12px !important;
+        transition: all 0.5s;
+    }
+ }
+}

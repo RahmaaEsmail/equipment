@@ -1,0 +1,29 @@
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 100%;
+
+    input ,select  , textarea{
+        border: 1px solid #ccc;
+        // background-color: #f9f6ef;
+        background-color: #cccccc2f;
+        border-radius: 5px;
+        padding: 10px 8px;
+        outline: none;
+        text-align: right;
+
+        &:focus {
+            outline: 1px solid var(--main-color);
+        }
+        
+        // &:focus {
+        //     border:2px solid var(--main-color)
+        // }
+    }
+
+    label {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}

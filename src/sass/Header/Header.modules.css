@@ -1,0 +1,243 @@
+.address-bar {
+    background-color: var(--main-color);
+    color: var(--main-bgColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.address-bar svg {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.address-bar h2 {
+    padding: 0 10px;
+    border-right: 1px solid var(--light-gray);
+}
+
+.address {
+    display: flex;
+}
+
+
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: 0.5px solid var(--light-gray);
+}
+
+header img {
+    width: 100px;
+    padding: 0px 0;
+}
+
+.main-btns {
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+.main-btns div ,
+.main-btns a {
+    margin: 0 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.main-btns div svg:hover ,
+.main-btns a svg:hover {
+    opacity: 0.5;
+}
+
+.main-btns div span ,
+.main-btns a span{
+    position: absolute;
+    top: 7px;
+    left: 23px;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: var(--main-bgColor);
+}
+
+.search {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bgColor);
+    border: 1px solid var(--light-gray);
+    border-radius: 30px;
+    padding: 0 10px;
+}
+
+.search .category {
+    font-size: 0.9rem;
+    border-left: 1px solid var(--light-gray);
+    border-right: 1px solid var(--light-gray);
+    padding: 5px 0 5px 20px;
+    cursor: pointer;
+}
+
+.search svg {
+    font-size: 1.6rem;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.search svg:hover {
+    opacity: 0.6;
+}
+
+.search input {
+    padding: 0 15px;
+    width: 100%;
+    outline: 0;
+}
+
+
+
+
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0.5px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+    padding: 0 30px;
+}
+
+.nav-list svg {
+    font-size: 1.3rem;
+}
+
+.nav-list button {
+    background-color: #4e4228;
+    /* background-color: #2067b4; */
+    color: var(--main-bgColor);
+    padding: 8px 20px;
+    cursor: pointer;
+}
+.nav-list button:hover {
+    opacity: 0.9;
+}
+
+.menu-ico {
+    display: none;
+    margin: 0 5px;
+}
+
+.menu-content {
+    display: none;
+}
+
+.menu-content .tabs .active {
+    background-color: var(--main-bgColor);
+    font-weight: 700;
+    border-bottom: 3px solid var(--main-color);
+}
+.sm-btn{
+    display: none;
+}
+@media only screen and (max-width: 1200px) {
+    .address-bar {
+        justify-content: center;
+    }
+
+    .address {
+        display: none;
+    }
+    header {
+        padding: 0 5px;
+    }
+    .nav-list {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+    .sm-btn{
+        display: inline;
+        font-size: 0.8rem;
+        background-color: var(--light-gray);
+        border-radius: 5px;
+        margin: 0 10px;
+        cursor: pointer;
+        padding: 8px;
+    }
+    .menu-ico {
+        display: inline;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.555);
+        width: 100%;
+        height: 100vh;
+        z-index: 500;
+    }
+
+    .menu-content {
+        display: block;
+        background: var(--main-bgColor);
+        height: 100vh;
+        width: 300px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .menu-content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu-content svg {
+        font-size: 1.5rem;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .menu-search input {
+        outline: 0;
+    }
+
+    .menu-content .tabs {
+        display: flex;
+    }
+
+    .menu-content .tabs button {
+        padding: 10px 0;
+        flex: 1;
+        background-color: var(--light-gray);
+        border: 1px solid var(--light-gray);
+        color: var(--del-price-color);
+        cursor: pointer;
+
+    }
+
+    .menu-content li {
+        padding: 10px;
+        border-bottom: 0.5px solid var(--light-gray);
+        cursor: pointer;
+    }
+}
