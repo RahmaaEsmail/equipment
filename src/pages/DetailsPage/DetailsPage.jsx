@@ -27,7 +27,7 @@ export default function DetailsPage() {
         }
     ]
     return (
-       <div className="!mx-8">
+       <div className="mx-4 md:!mx-8">
         <BreadCrumb  data={data}/>
          <div className="">
             <MainProduct />

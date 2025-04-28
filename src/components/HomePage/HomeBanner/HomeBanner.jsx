@@ -4,15 +4,18 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "./style.css";
 
 const BANNERS = [
   {
     id: 1,
-    image: "https://www.aldiwankitchen.com/wp-content/uploads/2024/10/Banner-Desktop-1.webp",
+    image:
+      "https://www.aldiwankitchen.com/wp-content/uploads/2024/10/Banner-Desktop-1.webp",
   },
   {
     id: 2,
-    image: "https://www.aldiwankitchen.com/wp-content/uploads/2024/10/DESKTOP-2-v1.webp",
+    image:
+      "https://www.aldiwankitchen.com/wp-content/uploads/2024/10/DESKTOP-2-v1.webp",
   },
 ];
 
@@ -43,7 +46,11 @@ export default function HomeBanner() {
       >
         {BANNERS.map((item) => (
           <SwiperSlide key={item.id}>
-            <img className="h-[90vh] w-full object-cover rounded-md" src={item.image} alt={`Banner ${item.id}`} />
+            <img
+              className="banner_img h-full w-full object-cover rounded-md"
+              src={item.image}
+              alt={`Banner ${item.id}`}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

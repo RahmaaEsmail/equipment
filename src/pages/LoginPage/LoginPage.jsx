@@ -1,10 +1,20 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, replace, useNavigate } from "react-router-dom";
+import { configs } from "../../configs";
 
 const LoginPage = () => {
   const navigate = useNavigate();
+  const [loginData , setLoginData] = useState({
+    email:"",
+    password:"",
+  })
+
+  function handleLogin() {
+    localStorage.setItem(configs.STORAGE_TOKEN_NAME , JSON.stringify(loginData))
+    window.location.href ="/"
+  }
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div className="bg-gray-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
         <div className="mb-8 text-center">
           <h1 className="text-2xl font-bold text-gray-800">أهلاً بعودتك</h1>
@@ -36,6 +46,8 @@ const LoginPage = () => {
                   </svg>
                 </div>
                 <input
+                onChange={(e) =>setLoginData({...loginData , email :e.target?.value})}
+                value={loginData?.email}
                   id="email"
                   name="email"
                   type="email"
@@ -76,6 +88,7 @@ const LoginPage = () => {
                   </svg>
                 </div>
                 <input
+                  onChange={(e) =>setLoginData({...loginData, password : e.target?.value})}
                   id="password"
                   name="password"
                   type="password"
@@ -111,9 +124,7 @@ const LoginPage = () => {
           </p>
         </div>
 
-        <button onClick={() =>{
-          window.location.href = '/'
-        }} className="mt-6 w-full bg-(--main-color) text-white p-2 rounded-md">تسجيل الدخول </button>
+        <button onClick={handleLogin} className="mt-6 w-full bg-(--main-color) text-white p-2 rounded-md">تسجيل الدخول </button>
 
       </div>
     </div>

@@ -1,8 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { motion } from "framer-motion"
-
-
+import { motion } from "framer-motion";
+import { Autoplay, Navigation } from "swiper/modules";
 
 export const BRANDS = [
   {
@@ -52,15 +51,45 @@ export const BRANDS = [
 export default function HomeCategories() {
   return (
     <motion.div
-    initial={{y:200, opacity:0}}
-    whileInView={{opacity:1, y:0}}
-    transition={{duration:0.8,ease:"easeOut"}}
-    className="my-11">
-      <div className="flex justify-between items-center">
-      <h3 className=" font-semibold !text-2xl mb-5">المعدات حسب الماركة</h3>
-     <a className="text-(--main-color) font-semibold text-md">إظهار المزيد</a>
+      initial={{ y: 200, opacity: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="my-11"
+    >
+      <div className="title flex justify-between items-center">
+        <h3 className=" font-semibold text-2xl mb-5">المعدات حسب الماركة</h3>
+        <a className="text-(--main-color) font-semibold text-md">
+          إظهار المزيد
+        </a>
       </div>
-      <Swiper spaceBetween={50} slidesPerView={6}>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={6}
+        autoplay={{ delay: 2000, stopOnLastSlide: false }}
+        modules={[Navigation, Autoplay]}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          1280: {
+            slidesPerView: 6,
+            spaceBetween: 40,
+          },
+        }}
+      >
         {BRANDS?.map((item) => (
           <SwiperSlide key={item?.id}>
             <div className="flex flex-col justify-center items-center">

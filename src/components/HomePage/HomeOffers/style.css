@@ -1,0 +1,33 @@
+@media (max-width: 870px) {
+  .big_offer {
+    display: none;
+  }
+
+  .offered_products_container {
+    grid-template-columns: 4fr 0fr;
+  }
+}
+
+@media (max-width: 870px) {
+  .big_offer {
+    display: none;
+  }
+
+  .offered_products_container {
+    grid-template-columns: 4fr 0fr;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  .products {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .sec_title {
+    font-size: 18px;
+  }
+}

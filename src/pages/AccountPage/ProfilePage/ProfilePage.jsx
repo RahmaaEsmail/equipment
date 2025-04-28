@@ -6,7 +6,7 @@ const ProfilePage = () => {
     const [editModal, setEditModal] = useState(false);
   
   return (
-    <section className=" min-h-[calc(100vh-50px)] py-8 antialiased container ">
+    <section className=" min-h-[calc(100vh-50px)] py-0 md:py-8 antialiased container ">
           <div className="mx-auto  max-w-screen-lg px-4 2xl:px-0">
           
             <div className="grid grid-cols-2 gap-6 border-b  border-gray-200 py-4  md:py-8 lg:grid-cols-4 xl:gap-16">

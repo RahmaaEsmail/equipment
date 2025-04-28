@@ -87,7 +87,7 @@ export default function ProductInfo() {
             className="text-[14px] text-[var(--main-color)]"
           />{" "}
           </div>
-          <div className="flex gap-2  items-center justify-between w-full">
+          <div className="flex gap-2 flex-wrap md:flex-nowrap  items-center justify-between w-full">
             <div className="input-group">
               <label>الاسم</label>
               <input type="text" />

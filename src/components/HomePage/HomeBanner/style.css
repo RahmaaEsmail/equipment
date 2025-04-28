@@ -1,0 +1,9 @@
+@media (max-width: 870px) {
+  .big_offer {
+    display: none;
+  }
+
+  .offered_products_container {
+    grid-template-columns: 4fr 0fr;
+  }
+}

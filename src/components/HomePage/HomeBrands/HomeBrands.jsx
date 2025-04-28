@@ -4,7 +4,7 @@ import { Autoplay, Navigation } from "swiper/modules"; // for Swiper v9+
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 
 const BRANDS = [
   {
@@ -47,32 +47,57 @@ const BRANDS = [
 
 export default function HomeBrands() {
   return (
-    <motion.div initial={{ opacity: 0, y: 100 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, ease: "easeOut" }} className="my-5 px-8">
-      <h3 className="text-center font-semibold  text-4xl text-black">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="my-5 px-8"
+    >
+      <h3 className="sec_title text-center font-semibold  text-4xl text-black">
         العلامات التجارية المميزة
       </h3>
 
       <div className="relative w-full">
-        <div className="absolute bg-[rgba(125,125,125,0.6)] text-white w-[40px] h-[40px] rounded-full flex justify-center items-center top-[50px] left-4 z-10 -translate-y-1/2 cursor-pointer swiper-button-prev-custom">
+        {/* <div className="absolute bg-[rgba(125,125,125,0.6)] text-white w-[40px] h-[40px] rounded-full flex justify-center items-center top-[80px] left-[-20px] z-10 -translate-y-1/2 cursor-pointer swiper-button-prev-custom">
           <FaChevronLeft size={20} />
         </div>
-        <div className="absolute top-[50px] bg-[rgba(125,125,125,0.6)] text-white right-4 z-10 w-[40px] h-[40px] rounded-full flex justify-center items-center -translate-y-1/2 cursor-pointer swiper-button-next-custom">
+        <div className="absolute top-[80px] bg-[rgba(125,125,125,0.6)] text-white right-[-20px] z-10 w-[40px] h-[40px] rounded-full flex justify-center items-center -translate-y-1/2 cursor-pointer swiper-button-next-custom">
           <FaChevronRight size={20} className="font-thin" />
-        </div>
+        </div> */}
 
         <Swiper
-          modules={[Autoplay, Navigation]}
           navigation={{
             nextEl: ".swiper-button-next-custom",
             prevEl: ".swiper-button-prev-custom",
           }}
-          autoplay={{ delay: 1000 }}
+          autoplay={{ delay: 1000, stopOnLastSlide: false }}
           loop={true}
           className="my-4"
           slidesPerView={6}
           spaceBetween={30}
+          modules={[Navigation, Autoplay]}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 6,
+              spaceBetween: 40,
+            },
+          }}
         >
           {BRANDS?.map((item) => (
             <SwiperSlide key={item?.id}>

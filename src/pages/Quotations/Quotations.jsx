@@ -49,7 +49,7 @@ export default function Quotations() {
   
 
   return (
-    <div className="px-8   overflow-hidden">
+    <div className="px-4 md:!px-8   overflow-hidden">
       <BreadCrumb
         data={[
           { id: 1, title: "الصفحه الرئيسية", route: "/" },
@@ -78,8 +78,8 @@ export default function Quotations() {
         </div>
       </div>
 
-      <div className=" rounded-md h-[430px]  grid grid-cols-2 gap-8">
-        <div className="overflow-y-auto pb-4 pe-6">
+      <div className=" rounded-md h-auto md:h-[430px]  grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="overflow-y-auto pb-4 pe-0 md:pe-6">
           <h3 className="font-bold text-xl text-(--main-color)">الفئات</h3>
 
           <div className="flex flex-col gap-2 my-4 w-full">
@@ -169,7 +169,7 @@ export default function Quotations() {
           <div>
             {selectedData?.length ? (
               <>
-                <div className="flex flex-col pe-4 mt-4 h-[180px] overflow-y-auto gap-2">
+                <div className="flex flex-col  pe-0 md:pe-4 mt-4 md:h-[180px] overflow-y-auto gap-2">
                   {selectedData?.map(
                     (item) =>
                       item?.quantity != 0 && (

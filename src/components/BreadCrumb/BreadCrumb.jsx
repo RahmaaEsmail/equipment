@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function BreadCrumb({ data }) {
   return (
-    <div className=" rounded-md !px-3 h-[50px] !mb-3 flex  items-center border border-gray-300">
-      <div className="flex  gap-2 text-md flex-wrap">
+    <div className=" rounded-md overflow-x-auto !px-3 h-[50px] !mb-3 flex  items-center border border-gray-300">
+      <div className="flex  min-w-[600px] gap-2 text-md flex-wrap">
         {data?.map((item, index) => {
           const isLast = index === data.length - 1;
           return (

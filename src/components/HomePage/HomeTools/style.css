@@ -1,0 +1,19 @@
+@media (max-width: 1000px) {
+  .tools_container {
+    display: block;
+  }
+
+  .products {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .banner {
+    display: none;
+  }
+
+  .banner_container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

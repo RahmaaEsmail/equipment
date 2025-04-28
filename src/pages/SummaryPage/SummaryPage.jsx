@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function SummaryPage() {
@@ -48,9 +49,10 @@ export default function SummaryPage() {
           المنتجات{" "}
         </h3>
 
-        <div className="bg-gray-100 p-3 px-6 border border-gray-200 rounded-lg">
-          {selectedData?.map((item) => (
-            <div className="grid  mx-auto not-last:border-b not-last:border-b-gray-300 py-4 grid-cols-4 gap-3 items-center">
+        <div  className="bg-gray-100 overflow-x-auto  p-3 px-6 border border-gray-200 rounded-lg">
+         <div className="flex flex-col min-w-[700px] gap-4">
+         {selectedData?.map((item) => (
+            <div className="grid grid-cols-[3fr_2fr_3fr_2fr_1fr] w-full   mx-auto not-last:border-b not-last:border-b-gray-300 py-4 gap-3 items-center">
               <div className="flex gap-2 just items-center ">
                 <img
                   className="h-16 w-16 rounded-md object-cover"
@@ -63,8 +65,13 @@ export default function SummaryPage() {
               <p className="text-center"> {item?.desc}</p>
 
               <p className="text-left font-bold text-lg">3000 جنيه</p>
+
+              <div className="flex justify-center items-center">
+                <FaTrash className="text-red-500"/>
+              </div>
             </div>
           ))}
+         </div>
         </div>
       </div>
 
@@ -103,7 +110,7 @@ export default function SummaryPage() {
 
 
 
-          <div className="flex gap-2 mt-4 w-[50%]  items-center">
+          <div className="flex gap-2 w-[90%] mt-5 md:w-[50%]  items-center">
             <button className="bg-(--main-color) w-full text-white p-3 rounded-md">
               ارسل الاوردر
             </button>

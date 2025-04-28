@@ -11,7 +11,7 @@ const FavoriteItems = () => {
     <div>
       <div className="rounded-lg border border-gray-200  p-4   md:p-8">
         {wishlistProducts?.length ? (
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
             {wishlistProducts?.map((item) => (
            <Card item={item}/>
           ))}

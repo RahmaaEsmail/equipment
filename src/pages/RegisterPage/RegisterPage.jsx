@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 const RegisterPage = () => {
    const navigate = useNavigate();
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div className="bg-gray-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
         <div className="mb-8 text-center">
           <h1 className="text-2xl font-bold text-gray-800">إنشاء حساب جديد</h1>

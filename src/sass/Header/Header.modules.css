@@ -151,16 +151,17 @@ header img {
 .sm-btn{
     display: none;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
     .address-bar {
-        justify-content: center;
+        /* justify-content: center; */
+        padding: 10px;
     }
 
     .address {
         display: none;
     }
     header {
-        padding: 0 5px;
+        /* padding: 0 5px; */
     }
     .nav-list {
         display: none;

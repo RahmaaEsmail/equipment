@@ -12,8 +12,8 @@ export default function CartPage({ activeStep, setActiveStep }) {
   );
   return (
     <div className="">
-      <div className="grid grid-cols-[7fr_5fr] gap-3">
-        <div className="flex flex-col pe-4 mt-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-[5fr_5fr] md:grid-cols-[7fr_5fr] gap-3">
+        <div className="flex flex-col pe-0 md:!pe-4 mt-4 gap-4">
           {selectedData?.length ? selectedData?.map(
             (item) =>
               item?.quantity != 0 && (

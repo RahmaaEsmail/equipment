@@ -25,7 +25,7 @@ const EnterResetCodePage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div className="bg-gray-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md text-center">
         <h1 className="text-2xl font-bold text-gray-800 mb-2">
           أدخل كود الاستعادة

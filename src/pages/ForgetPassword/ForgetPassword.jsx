@@ -7,7 +7,7 @@ const ForgetPasswordPage = () => {
 
 
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div className="bg-gray-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
         <div className="mb-8 text-center">
           <h1 className="text-2xl font-bold text-gray-800">استعادة كلمة المرور</h1>
